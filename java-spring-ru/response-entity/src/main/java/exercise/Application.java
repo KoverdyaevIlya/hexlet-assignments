@@ -51,7 +51,7 @@ public class Application {
 
         posts = posts.stream().map(p -> p.getId().equals(id) ? post : p).toList();
 
-        return ResponseEntity.status(optionalPost.isPresent() ? HttpStatus.OK : HttpStatus.NO_CONTENT).body(optionalPost.orElse(null));
+        return ResponseEntity.status(optionalPost.isPresent() ? HttpStatus.OK : HttpStatus.OK).body(optionalPost.orElse(null));
 
     }
     // END
