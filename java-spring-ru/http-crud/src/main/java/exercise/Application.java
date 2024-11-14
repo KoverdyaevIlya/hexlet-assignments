@@ -33,8 +33,8 @@ public class Application {
     }
 
     @GetMapping("/posts/{id}")
-    public Optional<Post> getPost(@PathVariable String id) {
-        return posts.stream().filter(post -> post.getId().equals(id)).findFirst();
+    public Post getPost(@PathVariable String id) {
+        return posts.stream().filter(post -> post.getId().equals(id)).findFirst().orElse(null);
     }
 
     @PostMapping("/posts")
