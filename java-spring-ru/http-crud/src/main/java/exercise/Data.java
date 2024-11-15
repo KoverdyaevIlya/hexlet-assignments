@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 class Data {
     private static final int ITEMS_COUNT = 30;
 
-    public static List<Post> getPosts() {
+    public static ArrayList<Post> getPosts() {
         Faker faker = new Faker();
 
         List<Integer> ids = IntStream
@@ -17,7 +17,7 @@ class Data {
             .boxed()
             .toList();
 
-        List<Post> posts = new ArrayList<>();
+        ArrayList<Post> posts = new ArrayList<>();
 
         for (int i = 0; i < ITEMS_COUNT; i++) {
             var id = "post" + ids.get(i);
